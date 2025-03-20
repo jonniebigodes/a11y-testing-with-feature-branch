@@ -125,11 +125,12 @@ export const ToCheckoutPage = {
 } satisfies Story
 
 export const ToSuccessPage = {
-  parameters: {
+  // Re-enable snapshot testing in Chromatic to test out interaction test failures
+  /*   parameters: {
     chromatic: {
       disableSnapshot: true,
     },
-  },
+  }, */
   play: async (context) => {
     await ToCheckoutPage.play(context)
     const { canvasElement, args, step } = context
