@@ -177,10 +177,13 @@ export const LoginForm: React.FC<{}> = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             onFocus={(e) => console.log('focus', e.target)}
+            role="gridcell"
           />
         </InputWrapper>
       </InputWithTooltip>
-      <SubmitButton type="submit">Login</SubmitButton>
+      <SubmitButton type="submit" aria-hidden="true">
+        Login
+      </SubmitButton>
       <ErrorMessage
         visible={true}
         aria-description="login status"
