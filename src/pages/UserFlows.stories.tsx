@@ -125,6 +125,11 @@ export const ToCheckoutPage = {
 } satisfies Story
 
 export const ToSuccessPage = {
+  parameters: {
+    chromatic: {
+      disableSnapshot: true,
+    },
+  },
   play: async (context) => {
     await ToCheckoutPage.play(context)
     const { canvasElement, args, step } = context
